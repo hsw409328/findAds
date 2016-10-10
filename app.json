@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tianqi/tianqi"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#090",
+    "navigationBarTitleText": "查询路线",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#303",
+    "selectedColor": "#0a0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "路线",
+        "iconPath": "image/car.png",
+        "selectedIconPath": "image/car_HL.png"
+      },
+      {
+        "pagePath": "pages/tianqi/tianqi",
+        "text": "天气",
+        "iconPath": "image/tianqi.png",
+        "selectedIconPath": "image/tianqi_HL.png"
+      }
+    ]
+  }
+}

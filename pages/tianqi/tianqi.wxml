@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view>
+<text>当前城市 </text>
+<text>"{{ads_location_name}}"</text>
+<text>{{ads_location}}</text>
+<input class="maininput" bindchange="bindblurKey" id="tjId" placeholder="{{ads_start}}" style="margin-top:30rpx;"/>
+<button  bindtap="findTj"  style="margin-top:30rpx;" >查询</button>
+</view>
+<view style="margin-top 30rpx;" >
+    <text style="margin-top:30rpx;margin-bottom:30rpx;" >{{ads_rs}}</text>
+    <view  wx:for="{{rs_tj}}" wx:for-index="idx" wx:for-item="itemName" style="margin-top:30px;background-color:#f7f7f7">    
+        <text>【{{idx+1}}、 </text>
+        <text>{{itemName.date+"  "}} </text>
+        <text>{{itemName.weather+"  "}} </text>
+        <text>{{itemName.wind+"  "}} </text>
+        <text>{{itemName.temperature+"】\n\r"}} </text>
+        白天：<image src="{{itemName.dayPictureUrl}}" style="width:50px;height:50px;"></image>
+        晚上：<image src="{{itemName.nightPictureUrl}}" style="width:50px;height:50px;"></image>
+    </view>
+    <text style="margin-top:30px;width:100%;background-color:#c0c0c0">每日温馨提示：</text>
+    <text wx:for="{{rs}}" wx:for-index="idx1" wx:for-item="itemName1" style="word-break: break-all; word-wrap:break-word;">
+    {{itemName1}}
+    </text>
+</view>

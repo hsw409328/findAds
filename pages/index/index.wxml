@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view>
+<text>当前城市 </text>
+<text>"{{ads_location_name}}"</text>
+<text>{{ads_location}}</text>
+<input class="maininput" bindchange="bindblurKey" id="startId" placeholder="{{ads_start}}" style="margin-top:30rpx;"/>
+<input class="maininput" bindchange="bindblurKey" id="endId" placeholder="{{ads_end}}" style="margin-top:30rpx;" />
+<button  bindtap="findAds"  style="margin-top:30rpx;" >查询</button>
+</view>
+<view style="margin-top 30rpx;" >
+    <text style="margin-top:30rpx;margin-bottom:30rpx;" >{{ads_rs}}</text>
+    <text wx:for="{{rs}}" wx:for-index="idx" wx:for-item="itemName" style="word-break: break-all; word-wrap:break-word;">
+    {{itemName}}
+    </text>
+</view>
